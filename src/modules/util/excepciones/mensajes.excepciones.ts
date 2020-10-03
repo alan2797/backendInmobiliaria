@@ -1,0 +1,16 @@
+export enum MensajeExcepcion {
+  NOT_FOUND_USER = 'El usuario no existe',
+  NOT_ROLES_USER = 'El usuario no tiene roles asignados, comuniquese con el administrador',
+  ERROR_TRANSACTION = 'Ha ocurrido un problema en la transacción, intentelo de nuevo',
+  ERROR_SAVED = 'Ha ocurrido un problema en el registro, intentelo de nuevo',
+  NOT_DATA = 'Aún no se han registrado datos',
+  NO_ACTION = 'No puede realizar la operación, acceso denegado',
+  USER_EXIST = 'El usuario ya se encuentra en uso',
+  NOT_FOUND_DATA = 'Información no disponible',
+  NOT_FOUND_XXXX = 'No se ha encontrado :info',
+  TOKEN_NOT_FOUND = 'Token no encontrado',
+  INVALID_CREDENTIALS = 'Credenciales invalidas',
+  NOT_ACCESS_DATABASE_GET = 'Ha ocurrido un problema en la recuperación de los datos, inténtelo de nuevo. Si el problema persiste, por favor, contacte con los administradores',
+  NOT_ACCESS_DATABASE_SAVE = 'Ha ocurrido un problema en el registro de los datos, inténtelo de nuevo. Si el problema persiste, por favor, contacte con los administradores',
+  NOT_SAVE_BUS_NIT = 'Ha ocurrido un problema, no puede registrar estos datos, ya existen en una asignación anterior, esta acción pueden ocasionar problemas en la facturación',
+}
