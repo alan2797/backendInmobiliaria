@@ -15,9 +15,12 @@ import { CaracteristicaModule } from './modules/caracteristica/caracteristica.mo
 import { InmuebleCaracteristicaModule } from './modules/inmueble-caracteristica/inmueble-caracteristica.module';
 import { InmuebleModule } from './modules/inmueble/inmueble.module';
 import { UbicacionModule } from './modules/ubicacion/ubicacion.module';
+import { ClienteModule } from './modules/cliente/cliente.module';
+import { ContratoModule } from './modules/contrato/contrato.module';
+import { CompartirModule } from './modules/compartir/compartir.module';
 
 @Module({
-  imports: [ConfigModule, DatabaseModule, PersonalModule, UsuarioModule, RolModule, FuncionalidadModule, RolFuncionalidadModule, PropietarioModule, CaracteristicaModule, InmuebleCaracteristicaModule, InmuebleModule, UbicacionModule],
+  imports: [ConfigModule, DatabaseModule, PersonalModule, UsuarioModule, RolModule, FuncionalidadModule, RolFuncionalidadModule, PropietarioModule, CaracteristicaModule, InmuebleCaracteristicaModule, InmuebleModule, UbicacionModule, ClienteModule, ContratoModule, CompartirModule],
   controllers: [AppController],
   providers: [AppService],
 })

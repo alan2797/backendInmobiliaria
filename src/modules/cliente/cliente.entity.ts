@@ -6,25 +6,30 @@ import {
   CreateDateColumn,
   UpdateDateColumn,
   DeleteDateColumn,
-  OneToMany,
 } from 'typeorm';
-import { InmuebleCaracteristica } from '../inmueble-caracteristica/inmueble-caracteristica.entity';
 
-@Entity('caracteristica')
-export class Caracteristica extends BaseEntity {
+@Entity('cliente')
+export class Cliente extends BaseEntity {
   @PrimaryGeneratedColumn('increment')
-  id: number;
+  idcliente: number;
 
   @Column({ type: 'varchar', length: 35, nullable: false })
   nombre: string;
 
-  //relaciones
-  @OneToMany(
-    () => InmuebleCaracteristica,
-    inmuebleCaracteristica => inmuebleCaracteristica.caracteristica,
-    { nullable: true, eager: false },
-  )
-  inmuebleCaracteristica: InmuebleCaracteristica;
+  @Column({ type: 'varchar', length: 35, nullable: false })
+  apellido: string;
+
+  @Column({ type: 'varchar', length: 10, nullable: false })
+  ci: string;
+
+  @Column({ type: 'varchar', length: 100, nullable: false })
+  direccion: string;
+
+  @Column({ type: 'varchar', length: 10, nullable: false })
+  telefono: string;
+
+  @Column({ type: 'varchar', length: 35, nullable: false })
+  correo: string;
 
   @CreateDateColumn({ type: 'timestamp', name: 'created_at', nullable: true })
   createdAt: Date;

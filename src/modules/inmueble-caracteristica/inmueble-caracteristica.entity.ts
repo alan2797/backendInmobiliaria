@@ -32,7 +32,7 @@ export class InmuebleCaracteristica extends BaseEntity {
   @ManyToOne(() => Caracteristica, {
     cascade: true,
     nullable: false,
-    eager: false,
+    eager: true,
   })
   @JoinColumn({ name: 'caracteristica_id' })
   caracteristica: Caracteristica;
